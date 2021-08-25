@@ -3,14 +3,16 @@ CREATE TABLE PRODUCTO(
     nom_pro varchar(50) null,
     des_pro varchar(150) null,
     pre_pro numeric(6,2) null,
-    estado int null,
+    estado int null, 
+    rutima_pro varchar(100) null,
+    stock int not null,
     CONSTRAINT pk_producto
     PRIMARY KEY (cod_pro)
 );
 ALTER TABLE PRODUCTO ADD rutima_pro varchar(100) null;
-INSERT INTO PRODUCTO (nom_pro, des_pro, pre_pro, estado, rutima_pro)
-VALUES ('Zapatillas Nike', 'Producto de la mas alta calidad y exclusividad.', 35000, 1, 'zapatillas.png'),
-('Poleron negro', 'Hoddie con costuras firmes y estilo esbelto.', 15000, 1, 'poleron2.png');
+INSERT INTO PRODUCTO (nom_pro, des_pro, pre_pro, estado, rutima_pro, stock)
+VALUES ('Zapatillas Nike', 'Producto de la mas alta calidad y exclusividad.', 35000, 1, 'zapatillas.png', 20),
+('Poleron negro', 'Hoddie con costuras firmes y estilo esbelto.', 15000, 1, 'poleron2.png', 43);
 
 CREATE TABLE USUARIO(
     cod_usu int not null AUTO_INCREMENT,
