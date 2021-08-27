@@ -184,6 +184,8 @@
             </div>                     
         </div>
     </main>
+
+    <?php include("../Views/layouts/footer.php") ?>
     <script src="../Controller/order.js"></script>
 </body>
 </html>

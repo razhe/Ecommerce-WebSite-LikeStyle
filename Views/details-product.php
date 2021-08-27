@@ -61,7 +61,7 @@
             </section>
             <section class="description__section container">
                 <div class="description__title">
-                    <h2>Descripcion del articulo</h2>
+                    <h2>Descripción del articulo</h2>
                 </div>
                 <div class="description__content">
                     <p id ="desc-product-detail" value=""></p>
@@ -69,6 +69,8 @@
             </section>
         </div>
     </main>
+
+    <?php include("../Views/layouts/footer.php") ?>
     <!--detail js-->
     <script>var p_url = '<?php echo htmlspecialchars($_GET["p"]); ?>';</script>
     <script src="../Controller/details.js"></script>

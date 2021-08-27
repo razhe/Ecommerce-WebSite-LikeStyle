@@ -862,3 +862,60 @@ body{
     }
 }
 
+/* Inicio Footer */
+
+.main__footer{
+    background-color: #c9c9c9;
+}
+
+.container__footer{
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__item{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 5px;
+}
+
+.footer__title{
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 5px;
+}
+
+.footer__products{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.footer__social{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    font-size: xx-large;
+}
+
+.icon__social{
+    font-size: xx-large;
+}
+
+.copyright{
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 10px;
+    justify-content: left;
+}
+
+.black{
+    color: black;
+}
+
+
+/* Fin Footer */
+

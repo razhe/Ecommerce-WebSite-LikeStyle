@@ -26,14 +26,17 @@
     <main class="products__content">
         <div class="container__sections container--flex">
             <div class="section__title container">
-                <h2>Mas populares</h2>
+                <h2>Más populares</h2>
             </div>
             <div class="product__section container--flex" id="product_mts_list">
                 <!--En conde...-->
             </div>
         </div>
     </main>
+
+    <?php include("../Views/layouts/footer.php") ?>
     <!--Main js-->   
     <script src="../Controller/main.js"></script>
 </body>
+
 </html>
