@@ -1,6 +1,6 @@
 $(document).ready(function(){
     get_products();
-   //get_count_cart();
+
 })
 
 function get_products(){
@@ -31,7 +31,6 @@ function get_products(){
                 </div>
                 `;
                 data.datos[i];
-                
             }
             document.getElementById('product_mts_list').innerHTML = html;
         },
@@ -40,29 +39,6 @@ function get_products(){
         }
     });
 }
-
-const toggleButton = document.getElementsByClassName('bars__menu')[0];
-const filterLinks = document.getElementsByClassName('menu__link');
-const filterContent1 = document.getElementsByClassName('content__options')[0]
-const filterContent2 = document.getElementsByClassName('user__option')[0]
-
-toggleButton.addEventListener('click', function(){
-    for(let i=0; i<filterLinks.length; i++){
-        filterContent1.classList.toggle('active');
-        filterContent2.classList.toggle('active');
-        console.log("a");
-    }
-})
-
-let menu = document.getElementById("bars-menu");
-menu.addEventListener('click', function () {
-    let opcionesMenu = document.getElementById('content-option');
-    let opcionesUsuario = document.getElementById('user-option');
-    opcionesMenu.classList.toggle('active-block');
-    opcionesUsuario.classList.toggle('active-flex');
-
-});
-
 
 /*
 function get_count_cart(){

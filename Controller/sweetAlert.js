@@ -1,5 +1,5 @@
+/*
 document.getElementById('btn-place-order').addEventListener('click', (e)=>{
-    
     Swal.fire({
         icon: 'success',
         title: 'Gracias por su compra!',
@@ -21,10 +21,11 @@ document.getElementById('btn-place-order').addEventListener('click', (e)=>{
           }, 100)
         },
       }).then((result) => {
-        /* Read more about handling dismissals below */
+        // Read more about handling dismissals below 
         if (result.dismiss === Swal.DismissReason.timer) {
             window.location.href = "../views/index.php";
             
         }
       })
 });
+*/

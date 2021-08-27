@@ -31,6 +31,8 @@
                                 ) ");
         mysqli_query($connection,$sqlVentaProd);
     }
+
+    mysqli_close($connection);
+
     unset($_SESSION['carrito']);
-    echo "Se ha comprado con exito!";
 ?>

@@ -55,9 +55,8 @@ body{
     border-radius: 4px;
     transition: .3s;
     letter-spacing: 1px;
-    font-size: .75rem;
-    font-weight: 700;
-    
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
 }
 .search__input:focus{
     border-color: rgba(244,148,30,.9);
@@ -603,8 +602,16 @@ body{
     border-radius: 3px;
     max-width: 530px !important; 
 }
-.container__cupon{
+.container__cupon, .container__order, .container__billing{
     max-width: 530px !important;
+}
+.container__billing{
+    position: relative;
+    bottom: 115px;
+}
+.tittle-container-checkout{
+    font-size: 1rem;
+    color: #25292e;
 }
 .names__form{
     display: flex;
@@ -622,6 +629,12 @@ body{
     border-radius: 3px;
     background: #fffefe;
     transition: .2s;
+}
+.valid-input{
+    border: 1px solid #3ecc51b2 !important;
+}
+.non-valid-input{
+    border: 1px solid #f84242d5;
 }
 .inpt__formulario:focus{
     border: 1px solid #f8a342d5;
@@ -849,6 +862,10 @@ body{
     .img__cart {
         width: 60px;
     }
+    .content__footer{
+        width: 100% !important;
+    }
+    
 }
 @media (max-width:900px){
     .section__left{
@@ -860,12 +877,19 @@ body{
     .section__right{
         width: 100%;
     }
+    .container__billing{
+        position: relative;
+        bottom: 0;
+    }
 }
 
 /* Inicio Footer */
 
 .main__footer{
-    background-color: #c9c9c9;
+    background-color: #c9c9c921;
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
 }
 
 .container__footer{
@@ -873,12 +897,14 @@ body{
     padding: 20px;
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
 .footer__item{
     padding-left: 20px;
     padding-right: 20px;
     padding: 5px;
+    font-size: .9rem;
 }
 
 .footer__title{
@@ -886,6 +912,8 @@ body{
     padding-left: 20px;
     padding-right: 20px;
     padding: 5px;
+    font-size: .95rem;
+    color: #2e3238;
 }
 
 .footer__products{
@@ -907,13 +935,15 @@ body{
 }
 
 .copyright{
+    border-top: 1px solid #25292e2f;
     font-family: 'Open Sans', sans-serif;
     padding-left: 10px;
     justify-content: left;
 }
 
-.black{
-    color: black;
+.footer__link{
+    text-decoration: none;
+    color: #25292eb4;
 }
 
 

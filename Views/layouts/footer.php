@@ -22,48 +22,45 @@
 <footer class="main__footer">
 
     <div class="container__footer container--flex container">
-        <div id="content-option" class="column--25">
+        <div id="content-option" class="content__footer column--25">
             <ul class="footer__products">
-                <li class="footer__item"><a href="#" class="menu__link">Comentarios</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Hazte miembro</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Registrate para recibir ofertas</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Electronicos</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Comentarios</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Hazte miembro</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Registrate para recibir ofertas</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Electronicos</a></li>
             </ul>
         </div>
 
-        <div id="content-option" class="column--25">
+        <div id="content-option" class="content__footer column--25">
             <ul class="footer__products">
-                <li class="footer__title">AYUDA</li>
-                <li class="footer__item"><a href="#" class="menu__link">Comunicate con nosotros</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Estado del pedido</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Opciones de pago</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Devoluciones</a></li>
+                <li class="footer__title"><i class="fas fa-caret-right"></i> AYUDA <i class="fas fa-caret-left"></i></li>
+                <li class="footer__item"><a href="#" class="footer__link">Comunicate con nosotros</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Estado del pedido</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Opciones de pago</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Devoluciones</a></li>
             </ul>
         </div>
 
-        <div id="content-option" class="column--25">
+        <div id="content-option" class="content__footer column--25">
             <ul class="footer__products">
-                <li class="footer__title">ACERCA DE LIKE STYLE</li>
-                <li class="footer__item"><a href="#" class="menu__link">Actualizaciones</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Empleo</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Politicas de privacidad</a></li>
-                <li class="footer__item"><a href="#" class="menu__link">Terminos y condiciones</a></li>
+                <li class="footer__title"><i class="fas fa-caret-right"></i> ACERCA DE LIKE STYLE <i class="fas fa-caret-left"></i></li>
+                <li class="footer__item"><a href="#" class="footer__link">Actualizaciones</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Empleo</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Politicas de privacidad</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Terminos y condiciones</a></li>
             </ul>
         </div>
 
-        <div id="content-option" class="column--25">
+        <div id="content-option" class="content__footer column--25">
             <ul class="footer__social">
-                <li class="footer__item"><a href="#" class="menu__link"><i class="icon__social fab fa-facebook-square"></i></a></li>
-                <li class="footer__item"><a href="#" class="menu__link"><i class="icon__social fab fa-instagram"></i></a></li>
-                <li class="footer__item"><a href="#" class="menu__link"><i class="icon__social fab fa-twitter"></i></a></li>
-                <li class="footer__item"><a href="#" class="menu__link"><i class="icon__social fab fa-youtube"></i></a></li>
+                <li class="footer__item"><a href="#" class="footer__link"><i class="icon__social fab fa-facebook-square"></i></a></li>
+                <li class="footer__item"><a href="#" class="footer__link"><i class="icon__social fab fa-instagram"></i></a></li>
+                <li class="footer__item"><a href="#" class="footer__link"><i class="icon__social fab fa-twitter"></i></a></li>
+                <li class="footer__item"><a href="#" class="footer__link"><i class="icon__social fab fa-youtube"></i></a></li>
             </ul>
         </div>
     </div>
-
-    <hr class="black">
-    
-    <div class="copyright container--flex container">
+    <div class="copyright container--flex">
         <div id="content-option">
             <p class="footer__item">© Like Style 2021. Todos los derechos reservados</p>
         </div>

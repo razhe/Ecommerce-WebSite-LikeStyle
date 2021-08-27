@@ -66,77 +66,42 @@
         <div class="section__left column--50">
 
             <div class="container__billing container">
-                <form action="#">
-                    <h2>FACTURA</h2>
+                <form class = "client_form" action="#">
+                    <h2 class="tittle-container-checkout">DETALLE DEL ENVIO</h2>
                     <div class="container__form container">
-                        <div class="country__form">
-                            <label for="pais">Pais *</label>
-                            <br>
-                            <input class="inpt__formulario inpt--100" type="text" name="pais">
-                        </div>
-
-                        <div class="names__form">
-                            <div class="first__name column--50 containerW900">
-                                <label for="nombre">Nombre *</label>
-                                <br>
-                                <input type="text" class="inpt__formulario inpt--50" name="nombre">
-                            </div>
-                            <div class="last__name column--50 containerW900">
-                                <label for="apellido">Apellido *</label>
-                                <br>
-                                <input type="text" class="inpt__formulario inpt--50" name="apellido">
-                            </div>
-                        </div>
-
-                        <div class="company__form">
-                            <div class="company__name">
-                                <label for="cName">Compañia *</label>
-                                <br>
-                                <input type="text" class="inpt__formulario inpt--100" name="cName">
-                            </div>
-                        </div>
-
                         <div class="address__form">
                             <label for="cName">Dirección *</label>
                             <br>
                             <div class="street__address">  
-                                <input type="text" class="inpt__formulario inpt--100" name="sAddress" placeholder="Calle, pje, etc.">
+                                <input id="inpt-address1" type="text" class="inpt__formulario inpt--100" name="sAddress" placeholder="Calle, pje, etc.">
                             </div>
                             <div class="type__address">
-                                <input type="text" class="inpt__formulario inpt--100" name="tAddress" placeholder="Departamento, casa, etc. (opcional)">
+                                <input id="inpt-address2" type="text" class="inpt__formulario inpt--100" name="tAddress" placeholder="Departamento, casa, etc. (opcional)">
                             </div>
                         </div>
-
                         <div class="address2__form">
                             <div class="region__address column--50 containerW900">
                                 <label for="region">Región *</label>
                                 <br>
-                                <input type="text" class="inpt__formulario inpt--50" name="region">
+                                <select name="region" id="select-region" class="inpt__formulario inpt--50">                                 
+                                </select>
+                                
                             </div>
                             <div class="comuna__address column--50 containerW900">
                                 <label for="comuna">Comuna *</label>
                                 <br>
-                                <input type="text" class="inpt__formulario inpt--50" name="comuna">
+                                <select name="comuna" id="select-comuna" class="inpt__formulario inpt--50">
+                                    <option value="1">Arica</option>
+                                    <option value="2">Camarones</option>
+                                    <option value="3">General Lagos</option>
+                                    <option value="4">Putre</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="contact__form">
-                            <div class="phone__number">
-                                <label for="numero">Telefono / Celular *</label>
-                                <br>
-                                <input type="text" class="inpt__formulario inpt--100" name="numero">
-                            </div>
-                            <div class="direccion__email">
-                                <label for="email">Email *</label>
-                                <br>
-                                <input type="text" class="inpt__formulario inpt--100" name="email">
-                            </div>
-                        </div>
-
                         <div class="commentary__form">
                             <label for="comentario">Comentario</label>
                             <br>
-                            <textarea name="comentario" class="ta__comm inpt--100" id="" cols="30" rows="10" placeholder="Añade un comentario (opcional)"></textarea>
+                            <textarea id="inpt-com" name="comentario" class="ta__comm inpt--100" cols="30" rows="10" placeholder="Añade un comentario (opcional)"></textarea>
                         </div>
                     </div>
                 </form>
@@ -144,7 +109,7 @@
         </div>
         <div class="section__right column--50">
             <div class="container__cupon container">
-                <h2>Codigo de descuento</h2>
+                <h2 class="tittle-container-checkout">CÓDIGO DE DESCUENTO</h2>
                 <div class="content__cupon">
                     <div class="parrafo__cupon">
                         <p>Ingresa un código de descuento si posees uno</p>
@@ -157,9 +122,8 @@
                 </div>
             </div>
 
-            <div class="container__order">
-                <h2>Tu orden</h2>
-                
+            <div class="container__order container">
+                <h2 class="tittle-container-checkout">ORDEN</h2>
                 <!--Row...-->
                 <div class="pay__section container">
                     <div class="order__row ">

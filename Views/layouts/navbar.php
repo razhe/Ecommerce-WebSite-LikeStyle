@@ -88,5 +88,7 @@
             </nav>
         </div>
     </header>
+    <!--Main js-->   
+    <script src="../Controller/navbar.js"></script>
 </body>
 </html>
