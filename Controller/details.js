@@ -1,8 +1,10 @@
 $(document).ready(function(){    
     get_detail_product();
-    //get_count_cart();
+    getTotalStock();
     
 });
+
+
 //var prod_url = '<?php echo htmlspecialchars($_GET["p"]); ?>';
 function get_detail_product(){
     $.ajax({
@@ -26,9 +28,24 @@ function get_detail_product(){
         }
     });
 }
-document.getElementById('add-quant-btn').addEventListener('click', function(){
-    document.getElementById('quant-inpt').value++;
-});
+function getTotalStock() {
+    $.ajax({
+        url:'../Model/product/get_prod_stock.php',
+        type:'POST',
+        data:{
+            codigo_producto : p_url
+        },
+        success : function(data){
+            document.getElementById('add-quant-btn').addEventListener('click', function(){  
+                if(document.getElementById('quant-inpt').value < parseInt(data)){
+                    document.getElementById('quant-inpt').value++;
+                }
+            });
+            document.getElementById('stock-text').innerHTML = `${data} en stock`;
+        }
+    });
+};
+
 document.getElementById('sub-quant-btn').addEventListener('click', function(){
     if(document.getElementById('quant-inpt').value > 1){
         document.getElementById('quant-inpt').value--;
@@ -50,6 +67,35 @@ document.getElementById('btn-add-cart').addEventListener('click',function() {
         }
     });
 });
+
+document.getElementById('btn-add-cart').addEventListener('click', function iniciar_compra(){
+    $.ajax({
+        url:'../Model/purchase/validate_purchase.php',
+        type:'POST',
+        data:{
+            cod_pro:p_url
+        },
+        success:function(data){
+            if (data.state == true) {
+                console.log(data.detail);
+            }else{
+                console.log(data.detail);
+                if (data.open_login == true) {
+                    open_login();
+                }
+            }
+        },
+        error:function(error){
+            console.error(error);
+        }
+    });
+    window.location.href="order.php";
+});
+function open_login(){
+    window.location.href=("login.php");
+}
+
+
 /*
 document.getElementById('btn-add-cart').addEventListener('click', function guardar_producto(){
     //let listaProducto = '{}';
@@ -79,33 +125,6 @@ document.getElementById('btn-add-cart').addEventListener('click', function guard
     
 })
 */
-
-document.getElementById('btn-add-cart').addEventListener('click', function iniciar_compra(){
-    $.ajax({
-        url:'../Model/purchase/validate_purchase.php',
-        type:'POST',
-        data:{
-            cod_pro:p_url
-        },
-        success:function(data){
-            if (data.state == true) {
-                console.log(data.detail);
-            }else{
-                console.log(data.detail);
-                if (data.open_login == true) {
-                    open_login();
-                }
-            }
-        },
-        error:function(error){
-            console.error(error);
-        }
-    });
-    window.location.href="order.php";
-});
-function open_login(){
-    window.location.href=("login.php");
-}
 /*
 function get_count_cart(){
     $.ajax({

@@ -41,7 +41,7 @@
                     <img id="img-product-detail" value="" name="img-product" class="img__detail" src="" alt="imagen-producto-detalle">
                 </div>
                 <div class="purchase__detail column--25">
-                    <h3>Precio:</h2>
+                    <h3>PRECIO:</h2>
                     <h3 id ="price-product-detail" value="" name="product-price"></h3> 
                     <p>(IVA incluido)</p>
                     <div class="tittle__quant">
@@ -51,6 +51,9 @@
                         <div class="quant__btn"><button id="sub-quant-btn" class="sub__quant btn-group-quant"><i class="fas fa-minus"></i></button></div>
                         <div class="quant__input"><input id="quant-inpt" class="quant__inpt btn-group-quant" value="1" type="text"></div>
                         <div class="quant__btn"><button id="add-quant-btn" class="add__quant btn-group-quant"><i class="fas fa-plus"></i></button></div>
+                    </div>
+                    <div class="stock__detail">
+                        <p class="stock__text" id="stock-text">N en stock</p>
                     </div>
                     <div class="btn__section__cart">
                         <a href="order.php?p=<?php echo htmlspecialchars($_GET["p"]); ?>">

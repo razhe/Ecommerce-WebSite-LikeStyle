@@ -29,7 +29,9 @@
                                 ".$arreglo[$i]['precio'].",
                                 ".$arreglo[$i]['cantidad'] * $arreglo[$i]['precio']."
                                 ) ");
+        $sqlActualizarStock = ("update producto set stock = stock - ".$arreglo[$i]['cantidad']." where cod_pro = ".$arreglo[$i]['id']);
         mysqli_query($connection,$sqlVentaProd);
+        mysqli_query($connection,$sqlActualizarStock);
     }
 
     mysqli_close($connection);

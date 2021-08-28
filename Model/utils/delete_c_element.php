@@ -1,5 +1,4 @@
 <?php
-
     session_start();
     $arreglo = $_SESSION['carrito'];
     for($i=0;$i<count($arreglo);$i++){

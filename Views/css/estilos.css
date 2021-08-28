@@ -255,22 +255,40 @@ body{
 }
 .purchase__detail > h3{
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    color: #25292ec0;
+
 }
 .purchase__detail > p{
     text-align: center;
-    font-size: .85rem;
-    font-weight: 800;
-    color: #343940;
+    font-size: .75rem;
+    font-weight: bold;
+    color: #34394059;
 }
 .tittle__quant
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
     font-family: 'Poppins', sans-serif;
     font-size: .8rem;
+}
+.stock__detail{
+    text-align: center;
+    font-size: .8rem;
+    font-weight: bold;
+    color: #00a1367c;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.stock__text{
+    border: 1px solid #00a1367c;
+    max-width: 180px;
+    width: 30%;
+    padding: 5px;
+    border-radius: 4px;
 }
 .group__buttons{
     display: flex;

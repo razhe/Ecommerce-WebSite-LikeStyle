@@ -8,7 +8,7 @@ $datos=[];
 //contadir
 $i = 0;
 //Consulta sql
-$sql = ("SELECT * FROM PRODUCTO WHERE ESTADO = 1");
+$sql = ("SELECT * FROM PRODUCTO WHERE ESTADO = 1 AND STOCK >= 1;");
 //creacion de la variable que almacena datos de la consulta
 $result = mysqli_query($connection, $sql);
 //Ciclo siempre que $result tenga datos
