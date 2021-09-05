@@ -9,7 +9,7 @@
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--Estilos-->
-    <link rel="stylesheet" href="../Views/css/estilos.css">
+    <link rel="stylesheet" href="../Views/css/estilos-nav.css">
     <title>E-commerce</title>
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +23,7 @@
             <div class="nav__info container--flex">
                 <div class="navbar__logo column--50">
                     <a href="index.php">
-                        <img class="logo__nav" src="../Views/img/logo2.png" alt="Logo empresa">
+                        <img class="logo__nav" src="../Views/img/logo5.png" alt="Logo empresa">
                     </a>
                 </div>
                 <div class="search__section column--50">
@@ -33,42 +33,65 @@
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
-                    <div class="item__user">
-                        <a class="cart__link" href="order.php">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </div>
-                    <div class="cart__counter" id="cart-counter">
-                        <div>
-                        <?php 
-                            if (isset($_SESSION['carrito'])) {
-                                echo count($_SESSION['carrito']);
-                            }else{
-                                echo 0;
-                            }
-                        ?>
+                    <div class="shopping__bag">
+                        <div class="item__user">
+                            <a class="cart__link" href="order.php">
+                                <i class="fas fa-shopping-bag cart__bag"></i>
+                            </a>
+                        </div>
+                        <div class="cart__counter" id="cart-counter">
+                            <div>
+                            <?php 
+                                if (isset($_SESSION['carrito'])) {
+                                    echo count($_SESSION['carrito']);
+                                }else{
+                                    echo 0;
+                                }
+                            ?>
+                            </div>
                         </div>
                     </div>
             </div>
             
 
             </div>
-            <nav class="navbar__links container">
-                <div class="options__section container">
+            <nav class="navbar__links container" id="navbar--links">
+                <div class="options__section">
                         <div class="bars__container">
                             <i id="bars-menu" class="fas fa-bars bars__menu"></i>
                         </div>
                                         
                         <div id="content-option" class="content__options column--55">
                             <ul class="nav__products">
-                                <li class="nav__item"><a href="#" class="menu__link">Ropa</a></li>
-                                <li class="nav__item"><a href="#" class="menu__link">Belleza</a></li>
-                                <li class="nav__item"><a href="#" class="menu__link">Calzado</a></li>
-                                <li class="nav__item"><a href="#" class="menu__link">Accesorios</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=1" class="menu__link">Ropa</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=2" class="menu__link">Belleza</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=3" class="menu__link">Calzado</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=4" class="menu__link">Accesorios</a></li>
                             </ul>
                         </div>
-                        <div id="user-option" class="user__option column--25">
+                        <div class="content__user column--25" id="content-user">
+                            <?php
+                                if (isset($_SESSION['codusu'])) {   
+                            ?>
+                            <li class="user__list">
+                                <a href="#" class="user__opt" id ="user-opt">Usuario <i class="far fa-user icon-user-opt"></i></a>
+                                <ul class = "drop__list" id="drop-list">
+                                    <li><a class = "user__link" href="#">Drop Menu 1</a></li>
+                                    <li><a class = "user__link" href="#">Drop Menu 2</a></li>
+                                    <li><a class = "user__link" href="#">Drop Menu 3</a></li>
+                                    <li><a class = "user__link" href="#">Drop Menu 4</a></li>
+                                </ul>
+                            </li>
+                            <?php
+                                }else{
+                            ?>
+                                <div class="login__register"><a class="register__link" href="register.php">Registrar </a> / <a class="login__link" href="login.php"> Login</a></div>
+            
+                            <?php
+                                }
+                            ?>
                         <?php 
+                        /*
                             if (isset($_SESSION['codusu'])) {
                                 echo 
                                 '<div class="item__user"><i class="fas fa-house-user"></i></div>';
@@ -77,12 +100,11 @@
                                 
                             }else{
                                 echo '                                                   
-                                <div class="item__user"><i class="fas fa-users"></i></div>
-                                <div class="item__user"><i class="fas fa-sign-in-alt"></i></div>
+                                
                                 ';
                             }
+                        */
                         ?>
-
                         </div>
                 </div>
             </nav>

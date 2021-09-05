@@ -17,19 +17,138 @@
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php include("../Views/layouts/navbar.php") ?>
     
     <main class="products__content">
+        <div class="banner">
+            <div class="capa__banner">
+
+            </div>
+            <div class="capa__banner2">
+
+            </div>
+            <div class="info__banner">
+                <h1 class="titulo__banner">Bienvenidos a <h1 class="nombre__tienda__banner">LikeStyle</h1></h1>
+                <p class="parrafo__banner">Lideres en ofertas, destacando la calidad de nuestros productos & servicios. Te invitamos a formar parte de nuestros clientes contentos.</p>
+                <a href="products.php" class="link__banner">COMPRAR AHORA</a>
+            </div>
+        </div>
+        <div class="seccion__categorias--index container--flex">
+            
+            <div class="barra__horizontal--cat"></div>
+
+            <div class="container__moda container__categoria column--33">
+                <a class="link__categoria--index" href="#">
+                    <div class="img__container--cat">
+                        <div class="info__categoria">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, aliquid!</p>
+                        </div>
+                        <h1 class="img__titulo--cat">MODA</h1>
+                        <img class="img__categoria" src="./img/moda-cat.jpg" alt="articulos de moda">
+                    </div>
+                </a>
+            </div>
+
+            <div class="container__belleza container__categoria column--33">
+                <a class="link__categoria--index" href="#">
+                    <div class="img__container--cat">
+                        <div class="info__categoria">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, aliquid!</p>
+                        </div>
+                        <h1 class="img__titulo--cat">ACCESORIOS</h1>
+                        <img class="img__categoria" src="./img/accesorios-cat.jpg" alt="Accesorios para vestir">
+                    </div>
+                </a>
+            </div>
+
+            <div class="container__accesorio container__categoria column--33">
+                <a class="link__categoria--index" href="#">
+                    <div class="img__container--cat">
+                        <div class="info__categoria">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, aliquid!</p>
+                        </div>
+                        <h1 class="img__titulo--cat">BELLEZA</h1>
+                        <img class="img__categoria" src="./img/belleza-cat.jpg" alt="Articulos de belleza - cosmeticos">
+                    </div>
+                </a>
+            </div>
+
+        </div>
         <div class="container__sections container--flex">
-            <div class="section__title container">
+            <div class="section__title container-adapt">
                 <h2>Más populares</h2>
+                <p class="parraf__section__title">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             </div>
             <div class="product__section container--flex" id="product_mts_list">
                 <!--En conde...-->
+            </div>
+        </div>
+        <div class="container__sections container--flex">
+            <div class="section__title container-adapt">
+                <h2>Novedades</h2>
+                <p class="parraf__section__title">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="product__section container--flex" id="product_novedades_list">
+                <div class="product__item column--25">               
+                    <img class="img__product" src="../views/img/gorro-pescador-negro.png" alt="${data.datos[i].nom_pro}">
+                    <div class="product__title">Gorra Pescador</div>
+                    <div class="product__price">$11000</div>
+                    <div class="product__options">
+                        <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
+                            Comprar ahora            
+                        </a>
+                    </div>   
+                </div>
+
+                <div class="product__item column--25">               
+                    <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
+                    <div class="product__title">Blusa Mujer</div>
+                    <div class="product__price">$7500</div>
+                    <div class="product__options">
+                        <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
+                            Comprar ahora
+                        </a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="hero_section">
+            <div class="hero__img">
+                <div class="capa1__hero"></div>
+                <div class="triangulo__hero1"></div>
+                <div class="triangulo__hero2"></div>
+            </div>
+        </div>
+        <div class="noticas__section">
+            <div class="container__noticias">
+                <h2 class="titulo__noticias">NOTICIAS</h2>
+                <p class="parrafo__noticias">Suscribete y mantente informado sobre nuestros productos y descuentos</p>
+                <div class="noticias__input--contenedor">
+                    <input class="inpt__noticias" type="text">
+                    <button class="btn__noticias">SUSCRIBIRSE</button>
+                </div>
+            </div>
+        </div>
+        <div class="marcas__section">
+            <div class="container__marcas container-adapt">
+                <img src="../views/img/marcas/adidas_logo.png" alt="" class="img__marca--index ">
+                <img src="../views/img/marcas/nike_logo.png" alt="" class="img__marca--index ">
+                <img src="../views/img/marcas/zara_logo.png" alt="" class="img__marca--index ">
+                <img src="../views/img/marcas/chanel_logo.png" alt="" class="img__marca--index ">
+                <img src="../views/img/marcas/lacoste_logo.png" alt="" class="img__marca--index">
             </div>
         </div>
     </main>

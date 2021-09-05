@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../img/email-pattern.png");
+}
+/*Formulario login*/
+.main__login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor__formulario{
+    width: 350px;
+    background: #171c24;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 4px;
+}
+.form__login{
+    margin: 0 20px 20px 20px;
+    width: 100%;
+}
+.login__tittle{
+    margin-bottom: 40px;
+    color: #dddddd;
+    font-size: 1.7rem;
+}
+.default__labelform{
+    color: #dddddd;
+}
+.input-default-form{
+    width: 95%;
+    height: 30px;
+    margin-bottom: 20px;
+    outline: none;
+    background: #323c4e;
+    border: none;
+    border-radius: 2px;
+    color:#fff;
+}
+.btn__send{
+    width: 115px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #343940;
+    color: #fff;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 10px;
+}
+.btn__send:hover{
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .3);
+    background: #Df3f3e;
+}
+.error__item{
+    max-width: 240px;
+    color: #Df3f3e;
+    background: rgba(223, 61, 55, .15);
+    border-radius: 5px;
+    border:1px solid #Df3f3e;
+    padding: 5px;
+    font-size: .9rem;
+}
+.warning__item{
+    max-width: 240px;
+    color: #F6BA00;
+    background: rgba(246, 223, 0, .2);
+    border-radius: 5px;
+    border:1px solid #F6BA00;
+    padding: 5px;
+    font-size: .9rem;
+}
+.no__account{
+    color: #dddddd;
+    font-size: .9rem;
+}
+.no__account__link{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #296fe0;
+}
+/*Responsividad*/
+
+@media(min-width:720px){
+    .container--flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu__link:hover{
+        color: #FF9800;
+    }
+    .column--25{
+        width: 25%;
+    }
+    .column--33{
+        width: 33%;
+    }   
+    .column--50{
+        width: 47%;
+    }
+    .column--55{
+        width: 55%;
+    }
+    .column--66{
+        width: 66%;
+    }
+    .column--75{
+        width: 74%;
+    }
+    
+}
+
+@media(max-width:720px){
+    .container-adapt{
+        width: 100%;
+    }
+    .container--flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:900px){
+    .section__left{
+        width: 100% !important;
+    }
+    .containerW900{
+        width: 100%;
+    }
+    .section__right{
+        width: 100% !important;
+    }
+    .container__billing{
+        position: relative;
+        bottom: 0;
+    }
+}

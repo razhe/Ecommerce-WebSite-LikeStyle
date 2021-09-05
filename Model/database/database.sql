@@ -85,10 +85,19 @@ CREATE TABLE comuna
     PRIMARY KEY (cod_comuna)
 );
 ALTER TABLE USUARIO ADD phone_usu varchar(12) null;
+ALTER TABLE USUARIO ADD nivel_usu int null;
 ALTER TABLE comuna ADD cod_region int not null;
 ALTER TABLE envio ADD cod_comuna int not null;
 ALTER TABLE envio ADD comentario varchar(500) null;
+ALTER TABLE producto ADD marca varchar(100) null, cod_categoria int null;
 
+CREATE TABLE categoria_prod (
+    cod_categoria int AUTO_INCREMENT not null,
+    nombre_categoria varchar(100) not null
+    CONSTRAINT pk_categoria
+    PRIMARY KEY (cod_categoria)
+);
+INSERT INTO categoria_prod (nombre_categoria) VALUES('ropa');
 --poblar tabla region - comuna
 
 INSERT INTO region VALUES(1,'Arica y Parinacota');

@@ -16,19 +16,14 @@ function buscar_producto(){
                     html += 
                     `
                     <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/${data.datos[i].rutima_pro}" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">${data.datos[i].nom_pro}</div>
-                            <div class="product__description">${data.datos[i].des_pro}</div>
-                            <div class="product__price">$${data.datos[i].pre_pro}</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    <button class="details__product" id="btn-details">Ver detalles <i class="fas fa-arrow-right"></i></button>
-                                </a>
-                                <a class="ref__cart" href = "b">
-                                    <button class="buy__product" id="btn-cart"><i class="fas fa-shopping-bag"></i></button>
-                                </a>
-                            </div>   
-                        
+                        <img class="img__product" src="../views/img/${data.datos[i].rutima_pro}" alt="${data.datos[i].nom_pro}">
+                        <div class="product__title">${data.datos[i].nom_pro}</div>
+                        <div class="product__price">$${data.datos[i].pre_pro}</div>
+                        <div class="product__options">
+                            <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
+                                Comprar ahora
+                            </a>
+                        </div>   
                     </div>
                     `;
                     data.datos[i];

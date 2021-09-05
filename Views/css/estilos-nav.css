@@ -1,0 +1,331 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: #fffefe;
+}
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+/*Navbar logo*/
+.container__nav{
+    background: #fffefe;
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo__nav{
+    width: 180px;
+}
+/*Navbar content*/
+.nav__info{
+    width: 100%;
+    background: #fffefe;
+}
+.fa-bars{
+    float: right;
+    font-size: 1.6rem;
+    display: none;
+    color: #fffefe;
+}
+.search__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+.search__response{
+    font-family: 'Open Sans', sans-serif;
+    color: #25292e49;
+}
+.search__input{
+    height: 35px;
+    width: 200px;
+    border: 1px solid #aaa;
+    outline: none;
+    background: #fffefe;
+    border-radius: 0;
+    border-radius: 4px;
+    transition: .3s;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.search__input:focus{
+    border-color: rgba(244,148,30,.9);
+}
+.btn__search{
+    height: 30px;
+    border-radius: 0px;
+    cursor: pointer;
+    border: none;
+    font-size: 22px;
+    color: #343940;
+    background: none;
+}
+.content__options{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+.nav__products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    
+}
+.nav__item{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menu__link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #343940;
+    transition: .3s;
+}
+
+.options__section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.content__user{
+    display: flex;
+    align-items: center;
+}
+
+.cart__link{
+    text-decoration: none;
+    color: #333;
+    margin-left: 30px;
+}
+.cart__bag{
+    font-size: 1.3rem;
+}
+.register__link, .login__link{
+    text-decoration: none;
+    font-size: .95rem;
+    color: #343940;
+}
+/*drop down*/
+.user__list{
+    list-style: none;
+}
+.user__opt{
+    text-decoration: none;
+    color: #343940;
+    font-size: .9rem;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #34394013;
+}
+.drop__list{
+    position: absolute;
+    background: #f8f8f8;
+    list-style: none;
+    top: 150px;
+    
+    padding-inline-start: 0px;
+    padding:10px;
+    margin: 0;
+    opacity: 0;
+    z-index: 2;
+    visibility: hidden;
+}
+.user__link{
+    padding: 5px;
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    font-size: .85rem;
+    text-decoration: none;
+    color: #343940;
+    position: relative;
+    border-left: 2px solid rgba(37, 41, 46, 0);
+}
+.icon-user-opt{
+    font-size: .9rem;
+}
+/*drop down*/
+
+.cart__counter{
+    width: 16px;
+    height: 16px;
+    background: #f04848dc;
+    font-size: .9rem;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+}
+.shopping__bag{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(min-width:720px){
+    /*navbar*/
+    .user__list:hover > .drop__list{
+        top: 137px;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.2s ease;
+        z-index: 2;
+    }
+    .user__link:hover{
+        border-left: 2px solid #f04848dc;
+    }
+}
+
+/*Responsividad*/
+@media(min-width:720px){
+    .container--flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu__link:hover{
+        color: #FF9800;
+    }
+    .column--25{
+        width: 25%;
+    }
+    .column--33{
+        width: 33%;
+    }   
+    .column--50{
+        width: 47%;
+    }
+    .column--55{
+        width: 55%;
+    }
+    .column--66{
+        width: 66%;
+    }
+    .column--75{
+        width: 74%;
+    }
+}
+@media(max-width:720px){
+    /*generales*/
+    .container__sections{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .container--flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /*navbar*/
+    .container__nav{
+        background: none;
+    }
+    .navbar__logo{
+        width: 100%;
+    }
+    .search__section{
+        width: 100%;
+        display: flex;
+        position: relative;        
+    }
+    .fa-bars{
+        display: block;
+        cursor: pointer;
+        margin: 0 10px 0 0;
+    }
+    .options__section{
+        display: block;
+        background: #171c24;
+        color: #F5F5F5;
+        margin: 20px 0px 0px 0px;
+        padding: 0;
+    }
+    .nav__products{
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+        text-align: center;       
+        transition: all .5s;
+    }
+    .nav__item{
+        margin: 10px 0 10px 0;
+        width: 100%;
+        transition: .2s;
+    }
+    .nav__item:hover{
+        background: #323c4e;
+        border-radius: 4px;
+    }
+    .menu__link{
+        color: #F5F5F5;
+        font-size: 1rem;
+        line-height: 30px;
+    }
+    .content__options{
+        width: 100%;
+        display: none;
+    }
+    .bars__container{
+        border-bottom: 1px solid rgba(10, 11, 15, 0.24);
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    /*usuario*/
+    .content__user{
+        width: 100%;
+        display: none;
+    }
+    .user__link{
+        color: #fff !important;
+    }
+    .user__opt{
+        font-size: 1rem;
+        border: none;
+        padding: 0;
+        color: #fff !important;
+    }
+    .drop__list{
+        position: relative;
+        top: 0;
+        padding: 0;
+        background: rgb(26, 32, 41);
+        opacity: 1;
+        z-index: 2;
+        visibility: visible;
+        color: #fff;
+        display: none;
+        font-size: .75rem;
+    }
+    .user__list{
+        
+        text-align: center;
+    }
+    .active-block{
+        display: block !important;
+    }
+    .login__register{
+        display: flex;
+        justify-content: center;
+    }
+    .register__link, .login__link{
+        text-decoration: none;
+        font-size: 1rem;
+        color: #f8f8f8;
+    }
+}

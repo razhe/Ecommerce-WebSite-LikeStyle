@@ -10,18 +10,9 @@
         $response -> open_login = true;      
     }else{
         //Capturando variables para la insersion
-        $cod_usu = $_SESSION['codusu'];
-        $cod_prod = $_POST['cod_pro'];
-        $sql= "INSERT INTO PEDIDO (cod_usu, cod_pro, fec_ped, estado, dir_usu, tel_usu) VALUES ($cod_usu, $cod_prod, now(), 1, '','')";
-        $result=mysqli_query($connection, $sql);
-        if ($result) {
-            $response -> state=true;
-            $response -> detail="Product added to order";
-        }else{
-            $response -> state = false;
-            $response -> detail = "we couldn't add the produt to the order, try later...";
-        }
-        
+        $response -> state = true;
+        $response -> detail = "access granted... been redirected to checkout";
+        $response -> open_login = false;
     }
     //Se cierra la coneccion
     mysqli_close($connection);

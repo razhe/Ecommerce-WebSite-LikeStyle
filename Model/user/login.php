@@ -2,7 +2,7 @@
     //error 1 error de conexion
     //email 2 invalido
     //contraseña 3 incorrecta
-    //contraseña sin credenciales
+    //4 sin credenciales
     include('../_conexion.php');
     $user_email=$_POST['user_email'];
     $user_pass=$_POST['user_pass'];
@@ -22,7 +22,7 @@
                     $_SESSION['codusu'] = $row['cod_usu'];
                     $_SESSION['emausu'] = $row['ema_usu'];
                     $_SESSION['nomusu'] = $row['nom_usu'];
-                    header('Location: ../../views/index.php');
+                    header('Location: ../../views/checkout.php');
                 }
             }else{
                 header('Location: ../../views/login.php?e=2');

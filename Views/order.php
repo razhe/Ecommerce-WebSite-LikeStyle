@@ -1,11 +1,6 @@
 <?php
-    session_start();
-    /*
-    if (!isset($_SESSION['codusu'])) {
-        header('location: index.php');
-    }
-    */
-    
+    session_start();  
+     
     include('../Model/_conexion.php');
     if(isset($_SESSION['carrito'])){
         //Si existe variable carrito validaremos si estaba agregado anteriormente el producto
@@ -117,7 +112,7 @@
     <main class="order__section">
         <div class="container__sections">
             <div class="order__container container--flex">
-                <div class="cart__container column--66 container">
+                <div class="cart__container container-adapt column--66">
                     <div class="cart__title title-section">
                         <h2>CARRITO</h2>
                     </div>
@@ -156,10 +151,16 @@
                                 
                             </div>
                         </div>
-                    <?php } } ?>
+                    <?php } 
+                    } else{
+                    ?>
+                        <div class="no__products__cart">
+                            <h3>No hay productos en el carrito</h3>
+                        </div>
+                    <?php } ?>
                     </div>
                 </div>
-                <div class="summatory__container column--25 container">
+                <div class="summatory__container column--25 container-adapt">
                     <div class="summ__title title-section">
                         <h2>SUMATORIO</h2>
                     </div>
@@ -173,7 +174,7 @@
                             <div class="item__article" id="total-price">$<?php echo $totalPagar; ?></div>
                         </div>
                         <div class="btn__summ">
-                            <button class="btn__pay" id="btn-process"><a class="link__checkout" href="checkout.php">PROCESAR PAGO</a></button>  
+                            <button class="btn__pay" id="btn-process">PROCESAR PAGO</button>  
                         </div>
                         
                     </div>
@@ -181,8 +182,31 @@
             </div>
             <div class="btn__cart">
                 <button class="btn__continue"><a class="link__continue" href="index.php">CONTINUAR COMPRANDO</a></button>
-            </div>                     
+            </div>                    
         </div>
+        <div class="benefi__section--order">
+            <div class="item__benefi--order">
+                <i class="far fa-gem icon__benifi"></i>
+                <div class="content__benefi--order">
+                    <h3 class="title__benefi--order">Calidad</h3>
+                    <p class="parraf__benefi--order">Productos originales & de alta calidad.</p>
+                </div>
+            </div>
+            <div class="item__benefi--order">
+                <i class="far fa-money-bill-alt icon__benifi"></i>
+                <div class="content__benefi--order">
+                    <h3 class="title__benefi--order">Medios de pago</h3>
+                    <p class="parraf__benefi--order">Multiples medios de pago para mayor flexibilidad.</p>
+                </div>
+            </div>
+            <div class="item__benefi--order">
+                <i class="far fa-handshake icon__benifi"></i>
+                <div class="content__benefi--order">
+                    <h3 class="title__benefi--order">Compromiso</h3>
+                    <p class="parraf__benefi--order">Nos comprometemos en entregar el mejor servicio.</p>
+                </div>
+            </div>
+        </div> 
     </main>
 
     <?php include("../Views/layouts/footer.php") ?>

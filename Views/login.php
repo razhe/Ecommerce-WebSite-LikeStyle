@@ -9,26 +9,30 @@
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--Estilos-->
-    <link rel="stylesheet" href="../Views/css/estilos.css">
+    <link rel="stylesheet" href="../Views/css/estilos-login.css">
     <title>E-commerce</title>
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
     <main class="main__login">
         <div class="contenedor__formulario">
-            <form action="../Model/user/login.php" method="POST">
-                <h2 class="login__tittle">Formulario de login</h2>
+            <form class="form__login" action="../Model/user/login.php" method="POST">
+                <h2 class="login__tittle">LOGIN</h2>
                 <div class="correo__login">
-                    <label for="id-correo">Correo:</label><br>
-                    <input type="text" name="user_email" id="id-correo" class="inpt__correo input-default-form">
+                    <label for="id-correo" class="default__labelform">Correo:</label><br>
+                    <input type="email" name="user_email" id="id-correo" class="inpt__correo input-default-form">
                 </div>
                 <div class="pass__login">
-                    <label for="id-pass">Contraseña:</label><br>
+                    <label for="id-pass" class="default__labelform">Contraseña:</label><br>
                     <input type="password" name="user_pass" id="id-pass" class="inpt__pass input-default-form">
                 </div>
                 <?php
@@ -52,6 +56,9 @@
                     }
                 ?>
                 <button class="btn__send" id="btn-send-login" type="submit">Enviar <i class="fas fa-sign-in-alt"></i></button>
+                <div class="register__now">
+                    <p class="no__account">¿No tienes una cuenta? <a href="" class="no__account__link"> registrese ahora</a></p>
+                </div>
             </form>
         </div>
     </main>

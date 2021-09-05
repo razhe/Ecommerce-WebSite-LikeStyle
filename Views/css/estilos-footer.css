@@ -1,0 +1,64 @@
+/* Inicio Footer */
+
+.main__footer{
+    background-color: #f5f5f5ad;
+    position: relative;
+    bottom: 0;
+}
+
+.container__footer{
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.footer__item{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 5px;
+    font-size: .9rem;
+}
+
+.footer__title{
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 5px;
+    font-size: .95rem;
+    color: #2e3238;
+}
+
+.footer__products{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.footer__social{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    font-size: xx-large;
+}
+
+.icon__social{
+    font-size: xx-large;
+}
+
+.copyright{
+    border-top: 1px solid #25292e2f;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 10px;
+    justify-content: left;
+}
+
+.footer__link{
+    text-decoration: none;
+    color: #25292eb4;
+}
+
+
+/* Fin Footer */

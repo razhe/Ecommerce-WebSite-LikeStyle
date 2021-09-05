@@ -33,31 +33,35 @@
 
     <main class="main__content">
         <div class="conainer__details container--flex">
-            <div class="detail__tittle container">
-                <h2 id="title-product-detail" value="" name="title-product"></h2>
-            </div>
-            <section class="detail__section container">
+            <section class="detail__section">
                 <div class="detail__preview column--75">
                     <img id="img-product-detail" value="" name="img-product" class="img__detail" src="" alt="imagen-producto-detalle">
                 </div>
                 <div class="purchase__detail column--25">
-                    <h3>PRECIO:</h2>
-                    <h3 id ="price-product-detail" value="" name="product-price"></h3> 
-                    <p>(IVA incluido)</p>
-                    <div class="tittle__quant">
-                            <h3>Cantidad:</h3>
+                    <div class="detail__tittle container">
+                        <h2 id="title-product-detail" value="" name="title-product"></h2>
                     </div>
+                    <div class="container__detail--precio">
+                        <h3 class="product__price--detail" id ="price-product-detail" value="" name="product-price"></h3> 
+                        <p class="product__iva--detail">(Más IVA)</p>
+                    </div>
+                    <div class="stock__detail">
+                        <p class="stock__text" id="stock-text">N en stock</p>
+                    </div>
+
+                    <div class="tittle__quant">
+                            <h3>Cantidad</h3>
+                    </div>
+
                     <div class="group__buttons">                     
                         <div class="quant__btn"><button id="sub-quant-btn" class="sub__quant btn-group-quant"><i class="fas fa-minus"></i></button></div>
                         <div class="quant__input"><input id="quant-inpt" class="quant__inpt btn-group-quant" value="1" type="text"></div>
                         <div class="quant__btn"><button id="add-quant-btn" class="add__quant btn-group-quant"><i class="fas fa-plus"></i></button></div>
                     </div>
-                    <div class="stock__detail">
-                        <p class="stock__text" id="stock-text">N en stock</p>
-                    </div>
+                    
                     <div class="btn__section__cart">
                         <a href="order.php?p=<?php echo htmlspecialchars($_GET["p"]); ?>">
-                            <button class = "add__cart" id="btn-add-cart"><i class="fas fa-cart-plus"></i> Comprar</button>
+                            <button class = "add__cart" id="btn-add-cart">Añadir al carrito </button>
                         </a>
                     </div>                   
                 </div>

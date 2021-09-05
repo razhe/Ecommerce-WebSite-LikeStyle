@@ -41,7 +41,7 @@ function getTotalStock() {
                     document.getElementById('quant-inpt').value++;
                 }
             });
-            document.getElementById('stock-text').innerHTML = `${data} en stock`;
+            document.getElementById('stock-text').innerHTML = `(${data} disponibles)`;
         }
     });
 };
@@ -67,33 +67,6 @@ document.getElementById('btn-add-cart').addEventListener('click',function() {
         }
     });
 });
-
-document.getElementById('btn-add-cart').addEventListener('click', function iniciar_compra(){
-    $.ajax({
-        url:'../Model/purchase/validate_purchase.php',
-        type:'POST',
-        data:{
-            cod_pro:p_url
-        },
-        success:function(data){
-            if (data.state == true) {
-                console.log(data.detail);
-            }else{
-                console.log(data.detail);
-                if (data.open_login == true) {
-                    open_login();
-                }
-            }
-        },
-        error:function(error){
-            console.error(error);
-        }
-    });
-    window.location.href="order.php";
-});
-function open_login(){
-    window.location.href=("login.php");
-}
 
 
 /*

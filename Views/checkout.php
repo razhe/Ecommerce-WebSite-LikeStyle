@@ -2,7 +2,10 @@
     //Sesiones y conexion a la BD
     session_start();
     include('../Model/_conexion.php');
-
+    //Si no está logueado lo redireccionamos
+    if (!isset($_SESSION['codusu'])) {
+        header('location: index.php');
+    }
     //Redireccion si no está la variable carrito creada
     if (!isset($_SESSION['carrito'])) {
         header('Location: ./index.php');

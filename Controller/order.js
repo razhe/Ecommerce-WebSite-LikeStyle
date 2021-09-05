@@ -62,6 +62,34 @@ for (let index = 0; index < elementoAdd.length; index++) {
         } 
     });  
 }
+
+
+document.getElementById('btn-process').addEventListener('click', function iniciar_compra(){
+    $.ajax({
+        url:'../Model/purchase/validate_purchase.php',
+        type:'POST',
+        data:{},
+        success:function(data){
+            if (data.state == true && data.open_login == false) {
+                console.log(data.detail);
+                window.location.href="checkout.php";
+            }else{
+                console.log(data.detail);
+                if (data.open_login == true) {
+                    open_login();
+                }
+            }
+        },
+        error:function(error){
+            console.error(error);
+        }
+    });
+    
+});
+
+function open_login(){
+    window.location.href=("login.php");
+}
 /*$(document).ready(function(){
     get_products();
 })

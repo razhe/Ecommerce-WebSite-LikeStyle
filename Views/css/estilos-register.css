@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;  
+}
+body{
+    background-image: url("../img/email-pattern.png");
+    margin: 0;
+    padding: 0;
+}
+/*Formulario register*/
+.register__section{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor__registro{
+    font-family: 'Nunito', sans-serif;
+    width: 370px;
+    background: #171c24;
+    border-radius: 4px;
+    padding: 10px;
+    color: #dddddd;
+    margin: 10px;
+}
+.titulo__registro{
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    margin: 10px 0 35px 0;
+}
+.contenedor__form__registro{
+    width: 100%;
+}
+.form__registro{
+    width: 100%;
+}
+.nom__app--registro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nombre__inpt--register, .app__inpt--register, .nombre__correo--register, .pass__inpt--register , .phone__inpt--register{
+    height: 30px;
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    background: #323c4e;
+    outline: none;
+    color: #fff;
+    font-size: .9rem;
+}
+.nom__section--registro, .app__section--registro, .ema__section--registro, .pass__section--registro, .phone__section--registro{
+    padding: 5px;
+}
+.inpt__enviar--registro{
+    margin: 20px 0 0 5px;
+    width: 115px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #343940;
+    color: #fff;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.inpt__enviar--registro :hover{
+    background: #Df3f3e;
+}
+
+
+.txt__container--registro{
+    display: flex;
+}
+.txt__registrado{
+    color: #fff;
+    font-size: .9rem;
+}
+.link__registrado{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #296fe0;
+}
+
+/*Responsividad*/
+
+@media(min-width:720px){
+    .container--flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu__link:hover{
+        color: #FF9800;
+    }
+    .column--25{
+        width: 25%;
+    }
+    .column--33{
+        width: 33%;
+    }   
+    .column--50{
+        width: 50%;
+    }
+    .column--55{
+        width: 55%;
+    }
+    .column--66{
+        width: 66%;
+    }
+    .column--75{
+        width: 74%;
+    }
+    
+}
+
+@media(max-width:720px){
+    .container-adapt{
+        width: 100%;
+    }
+    .container--flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
