@@ -1,3 +1,4 @@
+/*tables*/
 CREATE TABLE PRODUCTO(
     cod_pro int not null AUTO_INCREMENT,
     nom_pro varchar(50) null,
@@ -6,13 +7,11 @@ CREATE TABLE PRODUCTO(
     estado int null, 
     rutima_pro varchar(100) null,
     stock int not null,
+    marca varchar(100) null,
+    cod_categoria int null,
     CONSTRAINT pk_producto
     PRIMARY KEY (cod_pro)
 );
-ALTER TABLE PRODUCTO ADD rutima_pro varchar(100) null;
-INSERT INTO PRODUCTO (nom_pro, des_pro, pre_pro, estado, rutima_pro, stock)
-VALUES ('Zapatillas Nike', 'Producto de la mas alta calidad y exclusividad.', 35000, 1, 'zapatillas.png', 20),
-('Poleron negro', 'Hoddie con costuras firmes y estilo esbelto.', 15000, 1, 'poleron2.png', 43);
 
 CREATE TABLE USUARIO(
     cod_usu int not null AUTO_INCREMENT,
@@ -21,12 +20,14 @@ CREATE TABLE USUARIO(
     ema_usu varchar(50) not null,
     pass_usu varchar(20) not null,
     estado int not null,
+    phone_usu varchar(12) null,
+    nivel_usu int null,
     CONSTRAINT pk_usuario
     PRIMARY KEY (cod_usu)
 );
 INSERT INTO USUARIO (nom_usu, ape_usu, ema_usu, pass_usu, estado)
 VALUES ('Usuario','Demo', 'correo@example.com', '123456', 1);
-
+/*
 CREATE TABLE PEDIDO
 (
     cod_ped int AUTO_INCREMENT not null,
@@ -39,6 +40,7 @@ CREATE TABLE PEDIDO
     PRIMARY KEY (cod_ped)
 
 );
+*/
 CREATE TABLE venta
 (
     cod_ven int AUTO_INCREMENT not null,
@@ -55,9 +57,9 @@ CREATE TABLE venta_producto
     can_ven_pro int not null,
     pre_ven_pro datetime not null,
     stotal_ven_pro int not null,
+    cod_comuna int not null,
     PRIMARY KEY (cod_ven_pro)
 );
---Envios
 CREATE TABLE envio
 (
     cod_envio int AUTO_INCREMENT not null,
@@ -65,6 +67,7 @@ CREATE TABLE envio
     dir_envio varchar(200) not null,
     dir_envio2 varchar(200) not null,
     cod_ven int not null,
+    comentario varchar(500) null,
     CONSTRAINT pk_envio
     PRIMARY KEY (cod_envio)
 );
@@ -81,15 +84,10 @@ CREATE TABLE comuna
 (
     cod_comuna int AUTO_INCREMENT not null,
     nom_comuna varchar(200) not null,
+    cod_region int not null,
     CONSTRAINT pk_comuna
     PRIMARY KEY (cod_comuna)
 );
-ALTER TABLE USUARIO ADD phone_usu varchar(12) null;
-ALTER TABLE USUARIO ADD nivel_usu int null;
-ALTER TABLE comuna ADD cod_region int not null;
-ALTER TABLE envio ADD cod_comuna int not null;
-ALTER TABLE envio ADD comentario varchar(500) null;
-ALTER TABLE producto ADD marca varchar(100) null, cod_categoria int null;
 
 CREATE TABLE categoria_prod (
     cod_categoria int AUTO_INCREMENT not null,
@@ -97,6 +95,11 @@ CREATE TABLE categoria_prod (
     CONSTRAINT pk_categoria
     PRIMARY KEY (cod_categoria)
 );
+/*inserts*/
+INSERT INTO PRODUCTO (nom_pro, des_pro, pre_pro, estado, rutima_pro, stock)
+VALUES ('Zapatillas Nike', 'Producto de la mas alta calidad y exclusividad.', 35000, 1, 'zapatillas.png', 20),
+('Poleron negro', 'Hoddie con costuras firmes y estilo esbelto.', 15000, 1, 'poleron2.png', 43);
+
 INSERT INTO categoria_prod (nombre_categoria) VALUES('ropa');
 --poblar tabla region - comuna
 
