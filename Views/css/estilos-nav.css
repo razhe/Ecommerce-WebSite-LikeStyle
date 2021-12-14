@@ -41,10 +41,7 @@ body{
     margin-top: 30px;
     
 }
-.search__response{
-    font-family: 'Open Sans', sans-serif;
-    color: #25292e49;
-}
+
 .search__input{
     height: 35px;
     width: 200px;

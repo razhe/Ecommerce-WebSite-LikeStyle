@@ -77,7 +77,9 @@ body{
     display: inline-block;
     border-radius: 4px;
     font-size: .9rem;
+    transition: .3s;
 }
+
 @keyframes banner {
     0%,20%{
         background-image: url('../img/banner.jpg');
@@ -200,7 +202,9 @@ body{
     align-items: center;
     flex-wrap: wrap;
     margin: auto;
+    max-width: 1200px;
     width: 100%;
+    min-height: 300px;
 }
 
 .product__item{
@@ -287,7 +291,7 @@ body{
     position: absolute;
 }
 .triangulo__hero1{
-    border-width: 0 0 35vh 100vw;
+    border-width: 0 0 38vh 100vw;
     border-style: solid;
     border-color: transparent transparent #fff transparent;
     z-index: 1;
@@ -295,7 +299,7 @@ body{
     left: 0;
 }
 .triangulo__hero2{
-    border-width: 0 0 33vh 100vw;
+    border-width: 0 0 35vh 100vw;
     border-style: solid;
     border-color: transparent transparent #fff transparent;
     z-index: 1;
@@ -524,6 +528,7 @@ body{
     padding-left: 30px;
     padding-right: 30px;
     font-family: 'open-sans', sans-serif;
+    max-width: 1100px;
     width: 95%;
     margin: 30px 0 30px 0;
 }
@@ -719,7 +724,11 @@ body{
     font-family: 'poppins', sans-serif;
 }
 .btn__pay:hover{
-    background: #FF9800;
+    background: none;
+    border: 1px solid #343940;
+    color: #000;
+    font-weight:800;
+    font-size: .78rem;
 }
 .benefi__section--order{
     width: 100%;
@@ -923,10 +932,6 @@ body{
 .seccion__lista__filtro{
     font-family: 'Nunito', sans-serif;
     margin-bottom: auto;
-    margin-top: inherit;
-}
-.lista__titulo--filtro{
-    font-size: 1.1rem;
 }
 .lista__contenido--filtro{
     list-style: none;
@@ -951,16 +956,29 @@ body{
 }
 .container__btn__filtro{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .link__filtrar--productos{
     text-decoration: none;
+    max-width: 180px;
     width: 100%;
     background-color: #df293c;
     color: #fff;
     padding: 7px 20px 7px 20px;
     border-radius: 4px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+#section-text{
+    font-family: 'Nunito', sans-serif;
+    color: #313841a4;
+}
+.search__response{
+    font-family: 'Open Sans', sans-serif;
+    color: #25292e49;
+    height: 600px;
 }
 .pagination{
     display: flex;
@@ -1036,9 +1054,6 @@ body{
         display: flex;
         flex-wrap: wrap;
     }
-    .menu__link:hover{
-        color: #FF9800;
-    }
     .column--25{
         width: 25%;
     }
@@ -1057,7 +1072,6 @@ body{
     .column--75{
         width: 74%;
     }
-    
 }
 
 @media(max-width:720px){
@@ -1068,7 +1082,7 @@ body{
         width: 100%;
     }
     .container-adapt{
-        width: 100%;
+        width: 100% !important;
     }
     .container--flex{
         display: flex;

@@ -3,6 +3,7 @@ $(document).ready(function(){
 })
 function buscar_producto(){
     let busqueda = document.getElementById('search-input').value;
+    let contador = 0;
     if (!seach_url.trim() == "") {
         $.ajax({
             url:'../Model/utils/search_product.php',
@@ -29,10 +30,10 @@ function buscar_producto(){
                     data.datos[i];
                     
                 }
-                document.getElementById('product_mts_list').innerHTML = html;
+                document.getElementById('product-list').innerHTML = html;
                 document.getElementById('section-text').textContent = "Resultados de " + "'" +seach_url+ "'";
                 if (data.datos.length == 0) {
-                    document.getElementById('product_mts_list').innerHTML = `<h2 class = "search__response"> Busqueda sin coincidencia <h2>`;
+                    document.getElementById('product-list').innerHTML = `<h2 class = "search__response"> Busqueda sin coincidencia <h2>`;
                 }
             },
             error:function(error){
@@ -40,7 +41,7 @@ function buscar_producto(){
             }
         })
     }else{
-        document.getElementById('product_mts_list').innerHTML = `<h2 class = "search__response"> Sin resultados <h2>`;
+        document.getElementById('product-list').innerHTML = `<h2 class = "search__response"> Sin resultados <h2>`;
     }
     
 };

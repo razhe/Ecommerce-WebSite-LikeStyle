@@ -3,7 +3,7 @@ CREATE TABLE PRODUCTO(
     cod_pro int not null AUTO_INCREMENT,
     nom_pro varchar(50) null,
     des_pro varchar(150) null,
-    pre_pro numeric(6,2) null,
+    pre_pro int null,
     estado int null, 
     rutima_pro varchar(100) null,
     stock int not null,
@@ -25,22 +25,7 @@ CREATE TABLE USUARIO(
     CONSTRAINT pk_usuario
     PRIMARY KEY (cod_usu)
 );
-INSERT INTO USUARIO (nom_usu, ape_usu, ema_usu, pass_usu, estado)
-VALUES ('Usuario','Demo', 'correo@example.com', '123456', 1);
-/*
-CREATE TABLE PEDIDO
-(
-    cod_ped int AUTO_INCREMENT not null,
-    cod_usu int not null,
-    cod_pro int not null,
-    fec_ped datetime not null,
-    estado int not null,
-    dir_usu varchar(50) not null,
-    tel_usu varchar(12) not null,
-    PRIMARY KEY (cod_ped)
 
-);
-*/
 CREATE TABLE venta
 (
     cod_ven int AUTO_INCREMENT not null,
@@ -95,12 +80,31 @@ CREATE TABLE categoria_prod (
     CONSTRAINT pk_categoria
     PRIMARY KEY (cod_categoria)
 );
+
+/*
+CREATE TABLE PEDIDO
+(
+    cod_ped int AUTO_INCREMENT not null,
+    cod_usu int not null,
+    cod_pro int not null,
+    fec_ped datetime not null,
+    estado int not null,
+    dir_usu varchar(50) not null,
+    tel_usu varchar(12) not null,
+    PRIMARY KEY (cod_ped)
+
+);
+*/
 /*inserts*/
+INSERT INTO USUARIO (nom_usu, ape_usu, ema_usu, pass_usu, estado)
+VALUES ('Usuario','Demo', 'correo@example.com', '123456', 1);
+
 INSERT INTO PRODUCTO (nom_pro, des_pro, pre_pro, estado, rutima_pro, stock)
 VALUES ('Zapatillas Nike', 'Producto de la mas alta calidad y exclusividad.', 35000, 1, 'zapatillas.png', 20),
-('Poleron negro', 'Hoddie con costuras firmes y estilo esbelto.', 15000, 1, 'poleron2.png', 43);
+('Poleron negro', 'Hoddie con costuras firmes y estilo esbelto.', 15000, 1, 'poleron2.png', 43),
+('Blusa mujer', 'Prenda abierta de tela fina , similar a la camisa , que usan las mujeres y los niños , y que cubre la parte superior del cuerpo . 2. f. Prenda de trabajo holgada y con mangas', 12000, 1, 'poleron2.png', 43);
 
-INSERT INTO categoria_prod (nombre_categoria) VALUES('ropa');
+INSERT INTO categoria_prod (nombre_categoria) VALUES('ropa'),('calzado'),('accesorios'),('belleza');
 --poblar tabla region - comuna
 
 INSERT INTO region VALUES(1,'Arica y Parinacota');

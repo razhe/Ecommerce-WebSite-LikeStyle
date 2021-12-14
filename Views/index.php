@@ -13,6 +13,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--Estilos-->
     <link rel="stylesheet" href="../Views/css/estilos.css">
+    <!--Slick-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <title>E-commerce</title>
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,7 +46,7 @@
             <div class="info__banner">
                 <h1 class="titulo__banner">Bienvenidos a <h1 class="nombre__tienda__banner">LikeStyle</h1></h1>
                 <p class="parrafo__banner">Lideres en ofertas, destacando la calidad de nuestros productos & servicios. Te invitamos a formar parte de nuestros clientes contentos.</p>
-                <a href="products.php" class="link__banner">COMPRAR AHORA</a>
+                <a href="products.php?sccat=0" class="link__banner">COMPRAR AHORA</a>
             </div>
         </div>
         <div class="seccion__categorias--index container--flex">
@@ -92,7 +95,7 @@
                 <h2>Más populares</h2>
                 <p class="parraf__section__title">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             </div>
-            <div class="product__section container--flex" id="product_mts_list">
+            <div class="product__section center" id="product_mts_list">
                 <!--En conde...-->
             </div>
         </div>
@@ -101,7 +104,8 @@
                 <h2>Novedades</h2>
                 <p class="parraf__section__title">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             </div>
-            <div class="product__section container--flex" id="product_novedades_list">
+            <div class="product__section center" id="product_novedades_list">
+                <!--Productos novedades-->
                 <div class="product__item column--25">               
                     <img class="img__product" src="../views/img/gorro-pescador-negro.png" alt="${data.datos[i].nom_pro}">
                     <div class="product__title">Gorra Pescador</div>
@@ -120,6 +124,29 @@
                     <div class="product__options">
                         <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
                             Comprar ahora
+                        </a>
+                    </div>   
+                </div>
+
+
+                <div class="product__item column--25">               
+                    <img class="img__product" src="../views/img/gorro-pescador-negro.png" alt="${data.datos[i].nom_pro}">
+                    <div class="product__title">Gorra Pescador</div>
+                    <div class="product__price">$11000</div>
+                    <div class="product__options">
+                        <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
+                            Comprar ahora            
+                        </a>
+                    </div>   
+                </div>
+
+                <div class="product__item column--25">               
+                    <img class="img__product" src="../views/img/gorro-pescador-negro.png" alt="${data.datos[i].nom_pro}">
+                    <div class="product__title">Gorra Pescador</div>
+                    <div class="product__price">$11000</div>
+                    <div class="product__options">
+                        <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
+                            Comprar ahora            
                         </a>
                     </div>   
                 </div>
@@ -156,6 +183,9 @@
     <?php include("../Views/layouts/footer.php") ?>
     <!--Main js-->   
     <script src="../Controller/main.js"></script>
+
+    <!--Slick-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

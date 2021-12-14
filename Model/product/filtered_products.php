@@ -9,7 +9,12 @@ $datos=[];
 $i = 0;
 
 //Consulta sql
-$sql = ("SELECT * FROM PRODUCTO WHERE ESTADO = 1 AND STOCK >= 1;");
+if ($_POST['categoria'] != 0) {
+    $sql = ("SELECT * FROM PRODUCTO WHERE ESTADO = 1 AND STOCK >= 1 and cod_categoria = ".$_POST['categoria'].";");
+    
+}else{
+    $sql = ("SELECT * FROM PRODUCTO WHERE ESTADO = 1 AND STOCK >= 1;");
+}
 
 //creacion de la variable que almacena datos de la consulta
 $result = mysqli_query($connection, $sql);

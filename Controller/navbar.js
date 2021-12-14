@@ -11,7 +11,7 @@ menu.addEventListener('click', function () {
 });
 
 let usuario_btn = document.getElementById("user-opt");
-usuario_btn.addEventListener('click', function () {
+usuario_btn.addEventListener('click', (e)=> {
     let listaUsuario = document.getElementById('drop-list');
     listaUsuario.classList.toggle('active-block');
 });

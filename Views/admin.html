@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--Estilos-->
+    <link rel="stylesheet" href="../Views/css/estilos-admin.css">
+    <title>E-commerce</title>
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <!--DataTables & responsive-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
+    <!--DataTables responsive extension-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"/>
+    
+</head>
+<body>
+    <div class="contenedor__navbar">
+        <nav class="navbar__section">
+
+        </nav>
+    </div>
+    <div class="sidebar" id="sidebar-id">
+        <div class="toggle-btn">
+            <span><i class="fas fa-ellipsis-v icono-btn-toggle" id="icono-btn-toggle"></i></span>
+        </div>
+        <div class="admin-menu-title">
+            <header class="title-admin-panel">Administrador</header>
+        </div>
+        
+        <ul class="lista-panel-admin">
+            <li class="item-panel-admin"><a href="#" class="admin-panel-link"><i class="fas fa-mug-hot"></i> Inicio</a></li>
+            <li class="item-panel-admin"><a href="#" class="admin-panel-link"><i class="fas fa-store-alt"></i> Productos</a></li>
+            <li class="item-panel-admin"><a href="#" class="admin-panel-link"><i class="fas fa-user-cog"></i> Usuarios</a></li>
+            <li class="item-panel-admin"><a href="#" class="admin-panel-link"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+        </ul>
+    </div>
+    <div class="container__admin__body">
+        <section class="section__table">
+            <div class="table__container">
+                <table id="datatable" class="datatable">
+                    <thead class="table__head">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                            <th>Stock</th>
+                            <th>Marca</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" class="table__body">
+                        <!--  -->
+                    </tbody>
+                </table>
+            </div>
+        </section>  
+    </div>
+    
+    <script src="../Controller/admin.js"></script>
+    <!--DataTables-->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!--DataTables responsive extension-->
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+</body>

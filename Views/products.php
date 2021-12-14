@@ -39,250 +39,67 @@
             </div>
             <div class="product__section--general container--flex" id="products_list">
                 <!-- lista del filtro -->
-                <div class="seccion__lista__filtro column--25">
+                <div class="seccion__lista__filtro column--25 container-adapt">
                     <div>
-                        <div class="lista__titulo--filtro">
-                            <h3>Categoría</h3>
-                        </div>
-
-                        <ul class="lista__contenido--filtro">
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Shoes</span>
-                                    <small>(10)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Bags</span>
-                                    <small>(7)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span> Accessories</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Clothings</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div class="lista__titulo--filtro">
-                            <h3>Brands</h3>
-                        </div>
-
-                        <ul class="lista__contenido--filtro">
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Gucci</span>
-                                    <small>(10)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Burberry</span>
-                                    <small>(7)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span> Accessories</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Valentino</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Dolce & Gabbana</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Hogan</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Moreschi</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-
-                            <li class="item__lista--filtro">
-                                <input type="checkbox" name="" id="">
-                                <label for="">
-                                    <span>Givenchy</span>
-                                    <small>(3)</small>
-                                </label>
-                            </li>
-                        </ul>
+                        <form action="#" method="POST" class="form__filtro" id="form-filtro">  
+                            <div class="seccion__opciones__filtro">
+                                <h3>Parámetros</h3>
+                                <div class="container__clasificar item-form-ordenar">
+                                    <label for="sort-by">Clasificar</label>
+                                    <select class="select__clasificar select-filtro" name="clasificar" id="sort-by">
+                                    <option class="opt__select--clasificar" value="nom_pro" selected="selected">Nombre</option>
+                                    <option class="opt__select--clasificar" value="pre_pro">Precio</option>
+                                    <!--<option class="opt__select--clasificar" value="Ofertas">Ofertas</option>-->
+                                    <option class="opt__select--clasificar" value="Novedades">Novedades</option>
+                                    </select>
+                                </div>
+                                <div class="container__ordenar item-form-ordenar">
+                                    <label for="order-by">Ordenar</label>
+                                    <select class="select__ordenar select-filtro"  name="ordenar" id="sort-by">
+                                    <option class="opt__select--ordenar" value="ASC" selected="selected">ASC</option>
+                                    <option class="opt__select--ordenar" value="DESC">DESC</option>
+                                    </select>
+                                </div>           
+                            </div>
+                            <div class="lista__titulo--filtro">
+                                <h3>Marcas</h3>
+                            </div>
+                                                    
+                                <ul class="lista__contenido--filtro" id="lista-contenido-filtro">
+                                    <!--En code-->
+                                </ul>
+                                <div class="container__btn__filtro" id='container-btn-filtro'>
+                                    
+                                </div>
+                        </form>
                     </div>
                 </div>
                 <!-- opciones del filtro -->
                 <div class="column--75">
-                    <div class="seccion__opciones__filtro">
-                        <form class="form__opciones__filtro" action="">
-                            <div class="container__clasificar item-form-ordenar">
-                                <label for="sort-by">Clasificar</label>
-                                <select class="select__clasificar select-filtro" name="sort-by" id="sort-by">
-                                <option class="opt__select--clasificar" value="title" selected="selected">Nombre</option>
-                                <option class="opt__select--clasificar" value="number">Precio</option>
-                                <option class="opt__select--clasificar" value="search_api_relevance">Ofertas</option>
-                                <option class="opt__select--clasificar" value="created">Novedades</option>
-                                </select>
-                            </div>
-                            <div class="container__ordenar item-form-ordenar">
-                                <label for="order-by">Ordenar</label>
-                                <select class="select__ordenar select-filtro"  name="order-by" id="sort-by">
-                                <option class="opt__select--ordenar" value="ASC" selected="selected">ASC</option>
-                                <option class="opt__select--ordenar" value="DESC">DESC</option>
-                                </select>
-                            </div>
-                            <div class="container__btn__filtro">
-                                <a class="link__filtrar--productos item-form-ordenar" href="">Apply</a>
-                            </div>
-                            
-                        </form>
-                    </div>
-                    <div class="product__section container--flex" id="product_novedades_list">
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/gorro-pescador-negro.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Gorra Pescador</div>
-                            <div class="product__price">$11000</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora            
-                                </a>
-                            </div>   
-                        </div>
-
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
-
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
-
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
-
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
-
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
+                    <div class="product__section container--flex" id="product-list">
                         
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
-                        <div class="product__item column--25">               
-                            <img class="img__product" src="../views/img/blusa-mujer.png" alt="${data.datos[i].nom_pro}">
-                            <div class="product__title">Blusa Mujer</div>
-                            <div class="product__price">$7500</div>
-                            <div class="product__options">
-                                <a class="ref__details" href = "details-product.php?p=${data.datos[i].cod_pro}">
-                                    Comprar ahora
-                                </a>
-                            </div>   
-                        </div>
                     </div>
                     <!-- PAGINATION -->
                     <div class="seccion__paginacion">                      
                         <ul class="pagination">
-                            <span class="first__pagination "><i class="fas fa-chevron-left icon-first"></i> first</span>
+                            <span class="first__pagination "><i class="fas fa-chevron-left icon-first"></i> <i class="fas fa-chevron-left icon-first"></i> </span>
                             <span class="prev__pagination item-paginacion"><i class="fas fa-chevron-left"></i></span>
                             <span class="item-paginacion"> 1 </span>
                             <span class="item-paginacion"> 2 </span>
                             <span class="next__pagination item-paginacion"><i class="fas fa-chevron-right"></i></span>
-                            <span class="last__pagination ">Last <i class="fas fa-chevron-right icon-last"></i></span>
+                            <span class="last__pagination "><i class="fas fa-chevron-right icon-last"> </i><i class="fas fa-chevron-right icon-last"> </i></span>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <!--Main js   
+    <script>
+        /*var seach_url = '<?php echo htmlspecialchars($_GET["srch"]); ?>';*/
+        var product_url = '<?php echo htmlspecialchars($_GET["sccat"]); ?>';
+    </script>
     <!--<script src="../Controller/search.js"></script>-->
-    <!--<script>var seach_url = '<?php echo htmlspecialchars($_GET["srch"]); ?>';</script>-->
+    <script src="../Controller/products.js"></script>
+    
 </body>
 </html>
