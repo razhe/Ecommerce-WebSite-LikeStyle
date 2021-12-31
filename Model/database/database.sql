@@ -107,6 +107,16 @@ VALUES ('Zapatillas Nike', 'Producto de la mas alta calidad y exclusividad.', 35
 INSERT INTO categoria_prod (nombre_categoria) VALUES('ropa'),('calzado'),('accesorios'),('belleza');
 --poblar tabla region - comuna
 
+INSERT INTO `producto`(`nom_pro`, `des_pro`, `pre_pro`, `estado`, `rutima_pro`, `stock`, `marca`, `cod_categoria`) VALUES ('Pantalón Troy Lee','Finalmente está aquí, el kit del que todos hablaban en la final de SX en Utah.
+
+El último conjunto de nuestra colección One and Done, el GP Brushed.
+
+Diseñado pensando en la comodidad y el peso mínimo, el equipo GP también ofrece la durabilidad por la que se conoce a TLD.
+
+El material transpirable y flexible permite un ajuste cómodo y personalizado para cualquier piloto.
+
+La versatilidad de la línea la convierte en la elección perfecta para todo tipo de condiciones de conducción y carrera.',24000,1,'Pantalon-Troy-Lee.png',90,'GP brushed Team',1)
+
 INSERT INTO region VALUES(1,'Arica y Parinacota');
 INSERT INTO region VALUES(2,'Tarapacá');
 INSERT INTO region VALUES(3,'Antofagasta');

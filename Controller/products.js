@@ -1,15 +1,21 @@
 $(document).ready(function(){
-    display_products();
+    display_products(product_url, 0);
     display_brands();
 });
-
-function display_products(){
+//productos
+function display_products(url, limite){
+    let formulario_filtro = document.getElementById('form-filtro');
+    let campos = new FormData(formulario_filtro)
     $.ajax({
-        url:'../Model/product/filtered_products.php',
+        url:'../Model/product/clasifier_products.php',
         type:'POST',
         data:
         {
-            categoria : product_url
+            categoria : url,
+            limite : limite,
+            marca : campos.get('marca'),
+            clasificar :  campos.get('clasificar'),
+            ordenar : campos.get('ordenar')
         },
         success:function(data){
             let html = '';
@@ -29,19 +35,29 @@ function display_products(){
                 `;
                 data.datos[i];
             }
+            //PAGINACIÓN
             document.getElementById('product-list').innerHTML = html;
+            //console.log(Math.round(parseInt(data.conteo) / 10))
+            let htmlPaginas = '';
+            for (let i = 1; i <= Math.round(parseInt(data.conteo) / 10); i++) {
+                htmlPaginas += `<span class="item-paginacion num__pagina" data-paginacion="${((i - 1) * 10)}" ">${i}</span>`;//importante aplicar el data set para guardar la paginacion (Limite)
+            }
+            document.getElementById('num-paginacion').innerHTML = htmlPaginas;
+            defPagina();//paginacion 
         },
         error:function(error){
-
+            console.log(error)
         }
     })
 }
-
+//MARCAS
 function display_brands(){
     $.ajax({
-        url:'../Model/product/get_products.php',
+        url:'../Model/product/get_brands.php',
         type:'POST',
-        data:{},
+        data:{
+            categoria:product_url
+        },
         success:function(data){
             let html = '';
             for (let i = 0; i < data.datos.length; i++) {
@@ -50,42 +66,38 @@ function display_brands(){
                 <li class="item__lista--filtro">
                     <input type="radio" class="radio__cat" name="marca" value="${data.datos[i].marca}">
                     <label for="">
-                        <span>${data.datos[i].marca}</span>
+                        <span>${data.datos[i].marca}(${data.datos[i].cantidad})</span>
                         <small></small>
                     </label>
-                </li>
-
-                
+                </li>                
                 `;
             }
             htmlBtn = `<button type="submit" class="link__filtrar--productos item-form-ordenar">Aplicar</button>`;
 
             document.getElementById('lista-contenido-filtro').innerHTML = html;
             document.getElementById('container-btn-filtro').innerHTML = htmlBtn;
-            
-            
         },
         error:function(error) {
-            console.log(error);
         }
     })
 }
-
+//FILTRO
 let formulario_filtro = document.getElementById('form-filtro');
 
 formulario_filtro.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    
+    e.preventDefault();    
     let campos = new FormData(formulario_filtro)
-    buscarFiltros(campos.get('marca'), campos.get('ordenar'), campos.get('clasificar'))
+    buscarFiltros(product_url,campos.get('marca'), campos.get('ordenar'), campos.get('clasificar'))
 })
 
-function buscarFiltros(marca, orden, clasificacion) {
+function buscarFiltros(url, marca, orden, clasificacion) {
     $.ajax({
         type: 'POST',
         url: '../Model/product/clasifier_products.php',
         data: 
         {
+            categoria : url,
+            limite : 0,
             marca : marca,
             clasificar : clasificacion,
             ordenar : orden
@@ -109,24 +121,33 @@ function buscarFiltros(marca, orden, clasificacion) {
                 data.datos[i];
             }
             document.getElementById('product-list').innerHTML = html;
+            //PAGINACIÓN
+            document.getElementById('product-list').innerHTML = html;
+            //console.log(Math.round(parseInt(data.conteo) / 10))
+            let htmlPaginas = '';
+            for (let i = 1; i <= Math.round(parseInt(data.conteo) / 10); i++) {
+                htmlPaginas += `<span class="item-paginacion num__pagina" data-paginacion="${((i - 1) * 10)}" ">${i}</span>`;//importante aplicar el data set para guardar la paginacion (Limite)
+            }
+            document.getElementById('num-paginacion').innerHTML = htmlPaginas;
+            defPagina();//paginacion
         },
         error:function(error){
             console.log(error)
         }
     });
 }
-
-/*
-var clasificar = document.getElementsByClassName("opt__select--clasificar");
-
-document.getElementById('link-filtro').addEventListener('click', function(){
-    for (let i = 0; i < clasificar.length; i++) {
-        clasificar[i].addEventListener('click', function() {
-            console.log(clasificar[i].value)
+//PAGINACION
+var paginaActual = 0;
+function defPagina(){
+    let paginas = document.getElementsByClassName("num__pagina");
+    for (let i = 0; i < paginas.length; i++) {
+        paginas[i].addEventListener('click', function() {
+            var paginaActual = (paginas[i].dataset.paginacion);
+            display_products(product_url, paginaActual);
         })
     }
-})
-*/
+}
+
 
 
     

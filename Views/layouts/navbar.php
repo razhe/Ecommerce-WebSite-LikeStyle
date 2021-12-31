@@ -64,9 +64,9 @@
                         <div id="content-option" class="content__options column--55">
                             <ul class="nav__products">
                                 <li class="nav__item"><a href="products.php?sccat=1" class="menu__link">Ropa</a></li>
-                                <li class="nav__item"><a href="products.php?sccat=2" class="menu__link">Belleza</a></li>
-                                <li class="nav__item"><a href="products.php?sccat=3" class="menu__link">Calzado</a></li>
-                                <li class="nav__item"><a href="products.php?sccat=4" class="menu__link">Accesorios</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=2" class="menu__link">Calzado</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=3" class="menu__link">Accesorios</a></li>
+                                <li class="nav__item"><a href="products.php?sccat=4" class="menu__link">Belleza</a></li>
                             </ul>
                         </div>
                         <div class="content__user column--25" id="content-user">

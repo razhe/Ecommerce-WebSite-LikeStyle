@@ -82,12 +82,9 @@
                     <!-- PAGINATION -->
                     <div class="seccion__paginacion">                      
                         <ul class="pagination">
-                            <span class="first__pagination "><i class="fas fa-chevron-left icon-first"></i> <i class="fas fa-chevron-left icon-first"></i> </span>
-                            <span class="prev__pagination item-paginacion"><i class="fas fa-chevron-left"></i></span>
-                            <span class="item-paginacion"> 1 </span>
-                            <span class="item-paginacion"> 2 </span>
-                            <span class="next__pagination item-paginacion"><i class="fas fa-chevron-right"></i></span>
-                            <span class="last__pagination "><i class="fas fa-chevron-right icon-last"> </i><i class="fas fa-chevron-right icon-last"> </i></span>
+                            <div class="numeros__paginacion" id="num-paginacion">
+                                <!--Encode-->
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -95,10 +92,8 @@
         </div>
     </main>
     <script>
-        /*var seach_url = '<?php echo htmlspecialchars($_GET["srch"]); ?>';*/
         var product_url = '<?php echo htmlspecialchars($_GET["sccat"]); ?>';
     </script>
-    <!--<script src="../Controller/search.js"></script>-->
     <script src="../Controller/products.js"></script>
     
 </body>

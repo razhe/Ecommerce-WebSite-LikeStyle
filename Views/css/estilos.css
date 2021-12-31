@@ -266,7 +266,7 @@ body{
     opacity: 1;
 }
 .product__item:hover{
-    border-top: 1px hidden #c2c2c27e;
+    border-top: 1px hidden #fff;
     box-shadow: 1px 0 20px 0 rgba(0, 0, 0, .1);
     
 }
@@ -936,6 +936,7 @@ body{
 .lista__contenido--filtro{
     list-style: none;
     color: #485563;
+    padding: 20px !important;
 }
 .form__opciones__filtro{
     font-family: 'Nunito', sans-serif;
@@ -989,6 +990,9 @@ body{
     display: flex;
     justify-content: center;
 }
+.numeros__paginacion{
+    display: flex;
+}
 .item-paginacion{
     display: flex;
     align-items: center;
@@ -1000,6 +1004,7 @@ body{
     margin: 5px;
     border-radius: 30px;
     font-size: .8rem;
+    cursor: pointer;
 }
 .item-paginacion:hover, .first__pagination:hover, .last__pagination:hover{
     border: 1px hidden;
